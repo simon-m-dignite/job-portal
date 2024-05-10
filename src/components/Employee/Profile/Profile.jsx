@@ -17,13 +17,13 @@ const Profile = () => {
       <img
         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="cover-img"
-        className="w-full rounded-xl h-[60vh]"
+        className="w-full rounded-xl h-[50vh]"
         style={{ backgroundPosition: "center", backgroundSize: "cover" }}
       />
       <img
         src="https://images.unsplash.com/photo-1519456264917-42d0aa2e0625?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt=""
-        className="w-32 h-32 md:w-40 md:h-40 rounded-full relative top-[-60px] md:top-[-80px] left-8 md:left-10 border-[5px] border-white"
+        className="w-32 h-32 md:w-36 md:h-36 rounded-full relative top-[-60px] md:top-[-70px] left-8 md:left-10 border-[5px] border-white"
       />
       <div className="w-full grid grid-cols-1 lg:grid-cols-5 gap-6">
         <div className="col-span-5 lg:col-span-3 flex flex-col items-start gap-6">
@@ -196,7 +196,7 @@ const Profile = () => {
           </div>
           <h1 className="text-xl font-medium">Experience:</h1>
           <div className="w-full flex justify-start">
-            <div className="flex flex-col items-start justify-start">
+            <div className="flex flex-col items-start justify-start lg:w-48 gap-2">
               <FaConnectdevelop className="text-6xl" />
               <p className="text-gray-400 text-xs font-medium">2019 - 2022</p>
             </div>
@@ -212,7 +212,7 @@ const Profile = () => {
             </div>
           </div>
           <div className="w-full flex justify-start">
-            <div className="flex flex-col items-start justify-start">
+            <div className="flex flex-col items-start justify-start lg:w-48 gap-2">
               <FaConnectdevelop className="text-6xl" />
               <p className="text-gray-400 text-xs font-medium">2019 - 2022</p>
             </div>

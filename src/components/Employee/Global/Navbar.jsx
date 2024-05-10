@@ -51,7 +51,7 @@ const Navbar = () => {
             />
           </button>
           {showNav && (
-            <div className="w-40 h-auto bg-white absolute right-14 top-16 rounded-lg py-2 flex flex-col">
+            <div className="w-40 h-auto bg-white absolute right-14 top-16 rounded-lg py-2 flex flex-col shadow-xl">
               <Link
                 to="/employee/user-profile/12"
                 className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-green-600 transition-all duration-300"
@@ -64,7 +64,7 @@ const Navbar = () => {
               >
                 <SlSettings className="text-base" /> Settings
               </Link>
-              <button className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-red-600 transition-all duration-300">
+              <button className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-green-600 hover:text-red-600 transition-all duration-300">
                 <IoIosLogOut className="text-lg" /> Logout
               </button>
             </div>
