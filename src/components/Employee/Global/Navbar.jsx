@@ -93,7 +93,7 @@ const Navbar = () => {
             />
           </button>
           {showNav && (
-            <div className="w-40 h-auto bg-white absolute right-0 top-12 rounded-lg py-2 flex flex-col">
+            <div className="w-40 h-auto bg-white absolute right-0 top-12 rounded-lg py-2 flex flex-col custom-shadow">
               <Link
                 to="/employee/user-profile"
                 className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-green-600 transition-all duration-300"

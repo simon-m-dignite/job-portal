@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import Auth from "../components/Employee/Global/Auth";
 import Layout from "../components/Employee/Global/Layout";
+import NotFound from "../components/Employee/Global/NotFound";
 
 const Home = lazy(() => import("../pages/exmployee/Home"));
 const Jobs = lazy(() => import("../pages/exmployee//Jobs"));
@@ -26,7 +27,7 @@ export const routes = [
     page: <Register />,
   },
   {
-    title: "Register Page",
+    title: "Forgot Password Page",
     url: "/forgot-password",
     page: <ForgotPassword />,
   },
@@ -34,6 +35,11 @@ export const routes = [
     title: "Auth Page",
     url: "/",
     page: <Auth />,
+  },
+  {
+    title: "Not Found Page",
+    url: "/not-found",
+    page: <Layout pages={<NotFound/>} />,
   },
   {
     title: "Home Page",

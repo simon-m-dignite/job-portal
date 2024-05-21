@@ -6,7 +6,7 @@ import JobSearchContainer from "../Global/JobSearchContainer";
 
 const Hero = () => {
   return (
-    <div className="w-full h-auto py-24 md:py-0 md:h-screen flex flex-col justify-center items-center gap-y-6 text-center px-4 home-hero">
+    <div className="w-full h-auto pt-32 pb-20 md:py-0 md:h-screen flex flex-col justify-center items-center gap-y-6 text-center px-4 home-hero">
       <h1 className="text-white text-5xl md:text-6xl lg:text-6xl font-medium">
         Got Talent ? <br />
         Meet Opportunity
