@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import Auth from "../components/Employee/Global/Auth";
 import Layout from "../components/Employee/Global/Layout";
-import NotFound from "../components/Employee/Global/NotFound";
+const NotFound = lazy(() => import("../components/Employee/Global/NotFound"));
 
 const Home = lazy(() => import("../pages/exmployee/Home"));
 const Jobs = lazy(() => import("../pages/exmployee//Jobs"));
@@ -13,7 +13,7 @@ const AboutUs = lazy(() => import("../pages/exmployee/AboutUs"));
 const ContactUs = lazy(() => import("../pages/exmployee/ContactUs"));
 const Login = lazy(() => import("../pages/exmployee/Login"));
 const Register = lazy(() => import("../pages/exmployee/Register"));
-const ForgotPassword = lazy(()=> import("../pages/exmployee/ForgotPassword"))
+const ForgotPassword = lazy(() => import("../pages/exmployee/ForgotPassword"));
 
 export const routes = [
   {
@@ -39,7 +39,7 @@ export const routes = [
   {
     title: "Not Found Page",
     url: "/not-found",
-    page: <Layout pages={<NotFound/>} />,
+    page: <Layout pages={<NotFound />} />,
   },
   {
     title: "Home Page",
