@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { styles } from "../../../styles/styles";
 import { IoSearchOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
@@ -11,47 +11,14 @@ import { LuMenu } from "react-icons/lu";
 const Navbar2 = () => {
   const [scrolling, setScrolling] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const navigate = useNavigate();
+
+
   return (
     <div
       className={`w-full ${styles.paddingHorizontal} fixed top-0 border-b py-6 flex items-center justify-between z-30 bg-white`}
     >
       <h1 className={`text-2xl font-semibold`}>Jobstack</h1>
-      <div className="flex lg:hidden items-center gap-4">
-        <div className=" flex items-center">
-          <button
-            className="w-8 h-8 rounded-full bg-green-600"
-            onClick={() => setShowNav(!showNav)}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              className="w-full h-full rounded-full"
-              alt=""
-            />
-          </button>
-          {showNav && (
-            <div className="w-40 h-auto bg-white absolute right-14 top-16 rounded-lg py-2 flex flex-col shadow-xl">
-              <Link
-                to="/employee/user-profile/12"
-                className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-green-600 transition-all duration-300"
-              >
-                <FiUser className="text-base" /> Profile
-              </Link>
-              <Link
-                to="/settings"
-                className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-green-600 transition-all duration-300"
-              >
-                <SlSettings className="text-base" /> Settings
-              </Link>
-              <button className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-red-600 transition-all duration-300">
-                <IoIosLogOut className="text-lg" /> Logout
-              </button>
-            </div>
-          )}
-        </div>
-        <button className="block lg:hidden">
-          <LuMenu className="text-2xl text-black" />
-        </button>
-      </div>
       <div className="hidden lg:flex items-center gap-x-8 relative">
         <Link
           to="/employee/home"
@@ -99,13 +66,47 @@ const Navbar2 = () => {
           {showNav && (
             <div className="w-40 h-auto bg-white absolute right-0 top-12 rounded-lg py-2 flex flex-col">
               <Link
-                to="/profile"
+                to="/employee/user-profile"
                 className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-green-600 transition-all duration-300"
               >
                 <FiUser className="text-base" /> Profile
               </Link>
               <Link
-                to="/profile"
+                to="/settings"
+                className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-green-600 transition-all duration-300"
+              >
+                <SlSettings className="text-base" /> Settings
+              </Link>
+              <button onClick={()=> navigate("/login")} className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-red-600 transition-all duration-300">
+                <IoIosLogOut className="text-lg" /> Logout
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="flex lg:hidden items-center gap-4">
+        <div className=" flex items-center">
+          <button
+            className="w-8 h-8 rounded-full bg-green-600"
+            onClick={() => setShowNav(!showNav)}
+          >
+            <img
+              src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="w-full h-full rounded-full"
+              alt=""
+            />
+          </button>
+          {showNav && (
+            <div className="w-40 h-auto bg-white absolute right-14 top-16 rounded-lg py-2 flex flex-col shadow-xl">
+              <Link
+                to="/employee/user-profile"
+                className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-green-600 transition-all duration-300"
+              >
+                <FiUser className="text-base" /> Profile
+              </Link>
+              <Link
+                to="/settings"
                 className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-green-600 transition-all duration-300"
               >
                 <SlSettings className="text-base" /> Settings
@@ -116,6 +117,9 @@ const Navbar2 = () => {
             </div>
           )}
         </div>
+        <button className="block lg:hidden">
+          <LuMenu className="text-2xl text-black" />
+        </button>
       </div>
     </div>
   );

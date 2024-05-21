@@ -17,11 +17,11 @@ import { Link } from "react-router-dom";
 
 const DetailsGrid = () => {
   return (
-    <div className={`${styles.paddingHorizontal} bg-gray-50 w-full`}>
+    <div className={`${styles.paddingHorizontal} w-full`}>
       <div className="py-16"></div>
       <div className="w-full pt-4 pb-12 grid grid-cols-1 lg:grid-cols-3">
         <div className="col-span-3 lg:col-span-2 flex flex-col gap-y-6">
-          <div className="w-full shadow bg-white flex items-center gap-4 md:gap-12 p-4 md:p-8 rounded-lg">
+          <div className="w-full bg-gray-100 flex items-center gap-4 md:gap-12 p-4 md:p-8 rounded-lg">
             <div className="w-12 h-12 p-1 md:w-20 md:h-20 flex items-center justify-center border md:p-2 rounded-full">
               <FaFacebook className="w-full h-full text-blue-600" />
             </div>
@@ -135,7 +135,7 @@ const DetailsGrid = () => {
           </div>
         </div>
         <div className="col-span-3 lg:col-span-1 px-6">
-          <div className="w-full bg-white rounded-lg shadow">
+          <div className="w-full bg-gray-100 rounded-lg shadow">
             <div className="w-full border-b p-6">
               <h1 className="text-base font-medium">Job Information</h1>
             </div>

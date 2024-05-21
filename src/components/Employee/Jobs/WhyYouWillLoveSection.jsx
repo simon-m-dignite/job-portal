@@ -9,7 +9,7 @@ const WhyYouWillLoveSection = () => {
       className={`${styles.paddingHorizontal} py-6 lg:py-12 flex flex-col gap-y-6 items-center text-center`}
     >
       <h1 className="text-xl font-medium">
-        Here's why you'll love it Jobstack
+        Here's why you'll love Jobstack
       </h1>
       <p className={`${styles.grayText}`}>
         Search all the open positions on the web. Get your own personalized

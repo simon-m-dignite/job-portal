@@ -17,7 +17,7 @@ const Profile = () => {
       <img
         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="cover-img"
-        className="w-full rounded-xl h-[50vh]"
+        className="w-full rounded-xl h-[250px] md:h-40vh lg:h-[50vh]"
         style={{ backgroundPosition: "center", backgroundSize: "cover" }}
       />
       <img

@@ -8,7 +8,7 @@ const Jobs = () => {
   return (
     <div className="relative">
       <CommonHeader title={"Job Vacancies"} />
-      <div className="w-full relative top-[-40px]">
+      <div className="w-full relative top-[-40px] px-6 lg:px-0">
         <JobSearchContainer />
       </div>
       <JobsGrid />

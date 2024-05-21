@@ -10,6 +10,7 @@ import QuestionsAndAnswers from "../../components/Employee/Home/QuestionsAndAnsw
 const Home = () => {
   return (
     <div className={`w-full`}>
+      {/* <Navbar /> */}
       <Hero />
       <HowItWorks />
       <BrowseByCategories />

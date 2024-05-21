@@ -5,7 +5,7 @@ import { MdOutlineLocationOn } from 'react-icons/md'
 
 const JobSearchContainer = () => {
   return (
-    <div className="bg-white rounded-lg h-auto lg:h-20 flex items-center px-3 w-96 lg:w-[60%] shadow mx-auto">
+    <div className="bg-white rounded-lg h-auto lg:h-20 flex items-center px-3 w-full lg:w-[60%] shadow mx-auto">
     <div className="w-full grid grid-cols-1 lg:grid-cols-4">
       <div className="h-16 border-b lg:border-b-0 flex items-center justify-start gap-3 lg:border-r px-2">
         <BiSolidShoppingBag className={`${styles.textGreen} text-2xl`} />

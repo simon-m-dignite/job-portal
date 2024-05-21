@@ -12,8 +12,24 @@ const AboutUs = lazy(() => import("../pages/exmployee/AboutUs"));
 const ContactUs = lazy(() => import("../pages/exmployee/ContactUs"));
 const Login = lazy(() => import("../pages/exmployee/Login"));
 const Register = lazy(() => import("../pages/exmployee/Register"));
+const ForgotPassword = lazy(()=> import("../pages/exmployee/ForgotPassword"))
 
 export const routes = [
+  {
+    title: "Login Page",
+    url: "/login",
+    page: <Login />,
+  },
+  {
+    title: "Register Page",
+    url: "/register",
+    page: <Register />,
+  },
+  {
+    title: "Register Page",
+    url: "/forgot-password",
+    page: <ForgotPassword />,
+  },
   {
     title: "Auth Page",
     url: "/",
@@ -46,7 +62,7 @@ export const routes = [
   },
   {
     title: "UserProfile Page",
-    url: "/employee/user-profile/:id",
+    url: "/employee/user-profile",
     page: <UserProfile />,
   },
   {
@@ -58,15 +74,5 @@ export const routes = [
     title: "ContactUs Page",
     url: "/employee/contact-us",
     page: <Layout pages={<ContactUs />} />,
-  },
-  {
-    title: "Login Page",
-    url: "/login",
-    page: <Login />,
-  },
-  {
-    title: "Register Page",
-    url: "/register",
-    page: <Register />,
   },
 ];
