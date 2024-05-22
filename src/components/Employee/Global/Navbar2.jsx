@@ -33,6 +33,12 @@ const Navbar2 = () => {
           Jobs
         </Link>
         <Link
+          to="/hire"
+          className={`text-base hover:text-green-600 transition-all duration-200`}
+        >
+          Hire
+        </Link>
+        <Link
           to="/employee/about-us"
           className={`text-base hover:text-green-600 transition-all duration-200`}
         >

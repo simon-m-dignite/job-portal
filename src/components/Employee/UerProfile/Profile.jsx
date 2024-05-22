@@ -72,11 +72,11 @@ const Profile = () => {
               </div>
             </div>
             <div className="w-full flex items-center justify-start flex-wrap gap-y-6">
-              <div className="w-[30%] lg:w-[30%]">
+              <div className="w-[30%] lg:w-[33%]">
                 <h3 className="text-sm font-medium text-gray-500 mb-1">SPA</h3>
                 <p className="text-sm font-medium">12 Lac</p>
               </div>
-              <div className="w-[30%] lg:w-[30%]">
+              <div className="w-[30%] lg:w-[33%]">
                 <h3 className="text-sm font-medium text-gray-500 mb-1">
                   Location
                 </h3>
