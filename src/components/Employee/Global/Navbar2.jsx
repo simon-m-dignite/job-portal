@@ -72,7 +72,7 @@ const Navbar2 = () => {
                 <FiUser className="text-base" /> Profile
               </Link>
               <Link
-                to="/settings"
+                to="/employee/settings"
                 className="text-base w-full px-4 py-2 hover:bg-gray-100 flex items-center justify-start gap-2 text-gray-600 hover:text-green-600 transition-all duration-300"
               >
                 <SlSettings className="text-base" /> Settings

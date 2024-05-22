@@ -1,3 +1,5 @@
 import ContactUsImg from "./contact-us.png";
 
-export { ContactUsImg };
+import MillionsJobsMockup from "./millions-jobs-mockup.jpg";
+
+export { ContactUsImg, MillionsJobsMockup };

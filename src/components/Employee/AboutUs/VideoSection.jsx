@@ -9,7 +9,7 @@ const VideoSection = () => {
     >
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 h-full">
         <div className="col-span-2 lg:col-span-1 h-full bg-gray-100 lg:rounded-l-lg">
-            {/* <img src="https://images.unsplash.com/photo-1603195827187-459ab02554a0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className="w-full h-full"/> */}
+            {/* <img src="" alt="" className="w-full"/> */}
         </div>
         <div className="col-span-2 flex flex-col justify-center items-start px-12 gap-6 lg:col-span-1 bg-green-600 h-full lg:rounded-r-xl text-white">
           <h1 className="text-4xl font-semibold">Get the job of your dreams quickly.</h1>

@@ -2,13 +2,16 @@ import React from "react";
 import { styles } from "../../../styles/styles";
 import { IoIosCheckmark } from "react-icons/io";
 import { MdOutlineEmail } from "react-icons/md";
+import { MillionsJobsMockup } from "../../../assets/export";
 
 const MillionsOfJobsSection = () => {
   return (
     <div className={`w-full ${styles.paddingHorizontal} py-6 lg:py-12`}>
-      <div className="w-full grid grid-cols-2">
-        <div className="col-span-2 lg:col-span-1"></div>
-        <div className="col-span-2 lg:col-span-1 flex flex-col gap-y-6">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+        <div className="col-span-2 lg:col-span-1">
+          <img src={MillionsJobsMockup} alt="" className="rounded-lg"/>
+        </div>
+        <div className="col-span-2 lg:col-span-1 flex flex-col justify-center gap-y-6">
           <h1 className="text-2xl font-semibold">
             Millions of jobs. <br />
             Find the one that's right for you.

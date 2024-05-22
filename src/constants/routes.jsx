@@ -9,6 +9,7 @@ const JobApply = lazy(() => import("../pages/exmployee//JobApply"));
 const JobDetails = lazy(() => import("../pages/exmployee/JobDetails"));
 const JobCategories = lazy(() => import("../pages/exmployee/JobCategories"));
 const UserProfile = lazy(() => import("../pages/exmployee/UserProfile"));
+const Settings = lazy(()=> import("../pages/exmployee/Settings"))
 const AboutUs = lazy(() => import("../pages/exmployee/AboutUs"));
 const ContactUs = lazy(() => import("../pages/exmployee/ContactUs"));
 const Login = lazy(() => import("../pages/exmployee/Login"));
@@ -70,6 +71,11 @@ export const routes = [
     title: "UserProfile Page",
     url: "/employee/user-profile",
     page: <UserProfile />,
+  },
+  {
+    title: "Settings Page",
+    url: "/employee/settings",
+    page: <Settings />,
   },
   {
     title: "AboutUs Page",
