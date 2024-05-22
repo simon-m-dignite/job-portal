@@ -58,7 +58,7 @@ const Navbar = () => {
           Jobs
         </Link>
         <Link
-          to="/hire"
+          to="/employer/post-job"
           className={`text-base ${
             scrolling ? "text-black" : "text-white"
           } hover:text-green-600 transition-all duration-200`}

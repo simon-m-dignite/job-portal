@@ -9,12 +9,16 @@ const JobApply = lazy(() => import("../pages/exmployee//JobApply"));
 const JobDetails = lazy(() => import("../pages/exmployee/JobDetails"));
 const JobCategories = lazy(() => import("../pages/exmployee/JobCategories"));
 const UserProfile = lazy(() => import("../pages/exmployee/UserProfile"));
-const Settings = lazy(()=> import("../pages/exmployee/Settings"))
+const Settings = lazy(() => import("../pages/exmployee/Settings"));
 const AboutUs = lazy(() => import("../pages/exmployee/AboutUs"));
 const ContactUs = lazy(() => import("../pages/exmployee/ContactUs"));
 const Login = lazy(() => import("../pages/exmployee/Login"));
 const Register = lazy(() => import("../pages/exmployee/Register"));
 const ForgotPassword = lazy(() => import("../pages/exmployee/ForgotPassword"));
+
+// employer routes
+const Profile = lazy(() => import("../pages/employer/Profile"));
+const PostJob = lazy(() => import("../pages/employer/PostJob"));
 
 export const routes = [
   {
@@ -86,5 +90,16 @@ export const routes = [
     title: "ContactUs Page",
     url: "/employee/contact-us",
     page: <Layout pages={<ContactUs />} />,
+  },
+  // employer pages
+  {
+    title: "Employer Profile Page",
+    url: "/employer/profile",
+    page: <Profile />,
+  },
+  {
+    title: "Employer Post Job Page",
+    url: "/employer/post-job",
+    page: <PostJob />,
   },
 ];

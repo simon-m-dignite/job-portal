@@ -33,7 +33,7 @@ const Navbar2 = () => {
           Jobs
         </Link>
         <Link
-          to="/hire"
+          to="/employer/post-job"
           className={`text-base hover:text-green-600 transition-all duration-200`}
         >
           Hire
