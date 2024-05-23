@@ -14,7 +14,13 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/employee/home");
+    if(data.email === "smshoaib2001@gmail.com"){
+      navigate("/employee/home");
+    }else if(data.email === "admin@gmail.com"){
+      navigate("/employer/dashboard");
+    }else{
+      navigate("/login")
+    }
   };
 
   return (

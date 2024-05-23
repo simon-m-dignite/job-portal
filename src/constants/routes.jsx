@@ -1,6 +1,14 @@
 import { lazy } from "react";
 import Auth from "../components/Employee/Global/Auth";
 import Layout from "../components/Employee/Global/Layout";
+import Dashboard from "../pages/employer/Dashboard";
+import EmployerLayout from "../components/Employer/Global/EmployerLayout";
+import Applications from "../pages/employer/Applications";
+import ApplicationDetails from "../pages/employer/ApplicationDetails";
+import MyJobs from "../pages/employer/MyJobs";
+import Notifications from "../pages/employer/Notifications";
+import EditJob from "../pages/employer/EditJob";
+import EmployerSettings from "../pages/employer/EmployerSettings";
 const NotFound = lazy(() => import("../components/Employee/Global/NotFound"));
 
 const Home = lazy(() => import("../pages/exmployee/Home"));
@@ -93,6 +101,26 @@ export const routes = [
   },
   // employer pages
   {
+    title: "Employer Dashboard Page",
+    url: "/employer/dashboard",
+    page: <EmployerLayout pages={<Dashboard/>} />,
+  },
+  {
+    title: "Employer Edit Job Details Page",
+    url: "/employer/my-jobs",
+    page: <EmployerLayout pages={<MyJobs/>} />,
+  },
+  {
+    title: "Employer Applications Page",
+    url: "/employer/applications",
+    page: <EmployerLayout pages={<Applications/>} />,
+  },
+  {
+    title: "Employer Notifications Page",
+    url: "/employer/post-job",
+    page: <EmployerLayout pages={<ApplicationDetails/>} />,
+  },
+  {
     title: "Employer Profile Page",
     url: "/employer/profile",
     page: <Profile />,
@@ -100,6 +128,21 @@ export const routes = [
   {
     title: "Employer Post Job Page",
     url: "/employer/post-job",
-    page: <PostJob />,
+    page: <EmployerLayout pages={<PostJob />} />,
+  }, 
+  {
+    title: "Employer Applications Page",
+    url: "/employer/notifications",
+    page: <EmployerLayout pages={<Notifications />} />,
+  },
+  {
+    title: "Employer Notifications Page",
+    url: "/employer/edit-job/:id",
+    page: <EmployerLayout pages={<EditJob />} />,
+  },
+  {
+    title: "Employer Edit Job Details Page",
+    url: "/employer/settings",
+    page: <EmployerLayout pages={<EmployerSettings />} />,
   },
 ];

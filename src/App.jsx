@@ -5,10 +5,9 @@ import { routes } from "./constants/routes";
 import ScrollToTopButton from "./components/Employee/Global/ScrollToTopButton";
 
 function App() {
-
   return (
     <Suspense fallback={<Loader />}>
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
       <Routes>
         {routes.map((route, index) => {
           return <Route path={route.url} element={route.page} key={index} />;
