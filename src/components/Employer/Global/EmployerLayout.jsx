@@ -5,7 +5,7 @@ import { HiOutlineMenuAlt2 } from "react-icons/hi";
 const EmployerLayout = ({ pages }) => {
   const sidebarRef = useRef(null);
   const [isOpen, setisOpen] = useState(false);
-  
+
   const toggleModal = () => {
     setisOpen(!isOpen);
   };
@@ -40,16 +40,18 @@ const EmployerLayout = ({ pages }) => {
             <div className="relative bg-[#c00000]/[0.05] rounded-full h-10 w-10">
               <img
                 class="h-full w-full rounded-full object-cover object-center"
-                src={"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                src={
+                  "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
                 alt=""
               />
             </div>
-            <div className="text-sm flex flex-col justify-start items-start">
+            {/* <div className="text-sm flex flex-col justify-start items-start">
               <div className="font-semibold text-gray-700 leading-tight">
-                Steven Jobs
+                Admin
               </div>
-              <div className="text-gray-400">jobs@sailboatui.com</div>
-            </div>
+              <div className="text-gray-400">admin@jobstack.com</div>
+            </div> */}
 
             {/* <button>
               <PiCaretDown />

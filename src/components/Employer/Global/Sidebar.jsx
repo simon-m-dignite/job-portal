@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { HiOutlineLogout } from "react-icons/hi";
 import { LuLayoutDashboard } from "react-icons/lu";
@@ -10,13 +10,14 @@ import { LiaClipboardListSolid } from "react-icons/lia";
 const Sidebar = () => {
   const navigate = useNavigate();
   const [activeLink, setActiveLink] = useState("Dashboard");
+  const location = useLocation();
 
   const navigateToLink = (link, name) => {
     navigate(link);
     setActiveLink(name);
   };
   return (
-    <div className="w-full py-6 px-2 lg:px-10 flex flex-col items-center gap-y-6">
+    <div className="w-full py-6 px-2 lg:px-4 flex flex-col items-center gap-y-6">
       <div>
         <h1 className="text-lg font-semibold">Jobstack</h1>
       </div>
@@ -25,7 +26,7 @@ const Sidebar = () => {
           <button
             onClick={() => navigateToLink("/employer/dashboard", "Dashboard")}
             className={`text-sm flex items-center gap-3 font-medium w-full py-3 px-6 rounded-lg border ${
-              activeLink === "Dashboard"
+              location?.pathname === "/employer/dashboard"
                 ? "bg-green-600 text-white"
                 : "bg-transparent text-black hover:bg-green-600 hover:text-white transition-all duration-300"
             }`}
@@ -37,7 +38,7 @@ const Sidebar = () => {
           <button
             onClick={() => navigateToLink("/employer/my-jobs", "My-Jobs")}
             className={`text-sm flex items-center gap-3 font-medium w-full py-3 px-6 rounded-lg border ${
-              activeLink === "My-Jobs"
+              location?.pathname === "/employer/my-jobs"
                 ? "bg-green-600 text-white"
                 : "bg-transparent text-black hover:bg-green-600 hover:text-white transition-all duration-300"
             }`}
@@ -51,7 +52,7 @@ const Sidebar = () => {
               navigateToLink("/employer/applications", "Applications")
             }
             className={`text-sm flex items-center gap-3 font-medium w-full py-3 px-6 rounded-lg border ${
-              activeLink === "Applications"
+              location?.pathname === "/employer/applications"
                 ? "bg-green-600 text-white"
                 : "bg-transparent text-black hover:bg-green-600 hover:text-white transition-all duration-300"
             }`}
@@ -65,7 +66,7 @@ const Sidebar = () => {
               navigateToLink("/employer/notifications", "Notifications")
             }
             className={`text-sm flex items-center gap-3 font-medium w-full py-3 px-6 rounded-lg border ${
-              activeLink === "Notifications"
+              location?.pathname === "/employer/notifications"
                 ? "bg-green-600 text-white"
                 : "bg-transparent text-black hover:bg-green-600 hover:text-white transition-all duration-300"
             }`}
@@ -77,7 +78,7 @@ const Sidebar = () => {
           <button
             onClick={() => navigateToLink("/employer/settings", "Settings")}
             className={`text-sm flex items-center gap-3 font-medium w-full py-3 px-6 rounded-lg border ${
-              activeLink === "Settings"
+              location?.pathname === "/employer/settings"
                 ? "bg-green-600 text-white"
                 : "bg-transparent text-black hover:bg-green-600 hover:text-white transition-all duration-300"
             }`}
